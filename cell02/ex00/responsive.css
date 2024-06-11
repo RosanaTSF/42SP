@@ -1,0 +1,32 @@
+
+body {
+    font-family: Arial, sans-serif; /* Define a fonte */
+    background-color: #0a0000; 
+    margin: 0; /* Remove margens padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura da janela */
+}
+
+table {
+    width: 100%; 
+    height: 100%;
+    border-collapse: collapse; /* Remove espaçamento entre células */
+}
+/* Estilos para as células da tabela */
+td {
+    border: 6px solid #f9f948; 
+    padding: 20px; /* Espaçamento interno das células */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 1.5em; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui borda e padding no cálculo da largura/altura */
+}
+/* Estilos das células. */
+.cell1 {
+    background-color: #ff9999; 
+}
+.cell2 {
+    background-color: #99ccff;
+    color: #f9f948;
+}

@@ -1,0 +1,22 @@
+/* Ajustes para a barra de navegação fixa */
+body {
+    padding-top: 56px; /* Espaço para a barra de navegação fixa */
+}
+
+/* Estilo personalizado para a timeline */
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-item {
+    margin: 20px 0;
+}
+
+.timeline-item h5 {
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    margin: 0;
+}

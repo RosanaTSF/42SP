@@ -1,0 +1,26 @@
+* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif; 
+    display: flex; /* Usa flexbox para alinhar os elementos filhos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    height: 100vh; /* Define a altura como a altura total da viewport */
+    margin: 0; /* Remove as margens padrão */
+    transition: background-color 0.5s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+button {
+    padding: 30px 40px; /* Define o espaçamento interno do botão */
+    font-size: 1.8em; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Altera o cursor para pointer ao passar sobre o botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 15px; /* Adiciona bordas arredondadas ao botão */
+    background-color: #007BFF; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo do botão */
+}
+
+/* Estilos para o botão ao passar o mouse */
+button:hover {
+    background-color: #0056b3; /* Altera a cor de fundo do botão ao passar o mouse */
+}

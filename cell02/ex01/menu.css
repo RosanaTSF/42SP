@@ -1,0 +1,71 @@
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f5a8de; 
+    margin: 0; /* Remove margens padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura da janela */
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #333; /* Cor de fundo */
+    padding: 10px; /* Espaçamento */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.menu {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margens */
+    display: flex; /* Exibe itens em linha */
+}
+
+/* Estilos para itens do menu */
+.menu-item {
+    position: relative; /* Necessário para o submenu */
+}
+
+.menu-item a {
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 10px 20px; /* Espaçamento interno */
+    display: block; /* Exibe como bloco */
+}
+
+.menu-item a:hover {
+    background-color: #bb2aa8; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o submenu */
+.submenu {
+    display: none; /* Esconde o submenu por padrão */
+    position: absolute; /* Posiciona o submenu */
+    top: 100%; /* Alinha ao final do item do menu */
+    left: 0; /* Alinha à esquerda */
+    background-color: #a47efd; /* Cor de fundo */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margens */
+    list-style: none; /* Remove marcadores de lista */
+    border-radius: 5px; /* Bordas arredondadas */
+    z-index: 1000; /* Garante que o submenu fique sobre outros elementos */
+}
+
+.submenu li a {
+    padding: 10px; /* Espaçamento interno */
+    color: #0c0c0c; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Exibe como bloco */
+}
+
+.submenu li a:hover {
+    background-color: #aaf7bd; /* Cor de fundo ao passar o mouse */
+}
+
+/* Mostra o submenu ao passar o mouse sobre o item do menu */
+.menu-item:hover .submenu {
+    display: block; /* Exibe o submenu */
+}
+

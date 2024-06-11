@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Define a largura da página como a largura do dispositivo e a escala inicial como 1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página -->
+    <title>Calculadora Básica</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <!-- Formulário da calculadora -->
+    <form id="calculator">
+        <!-- Campo de entrada para o membro esquerdo -->
+        <input type="number" id="leftOperand" placeholder="Número esquerdo" min="0" required>
+        
+        <!-- Campo de seleção para os operadores -->
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        
+        <!-- Campo de entrada para o membro direito -->
+        <input type="number" id="rightOperand" placeholder="Número direito" min="0" required>
+        
+        <!-- Botão de submit para executar o cálculo -->
+        <input type="submit" value="Try me!">
+    </form>
+
+    <!-- Script jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Script JavaScript externo -->
+    <script src="calc.js"></script>
+</body>
+</html>

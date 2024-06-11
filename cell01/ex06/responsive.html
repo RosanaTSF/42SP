@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <!-- Estilos CSS -->
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte */
+            background-color: #0a0000; 
+            margin: 0; /* Remove margens padrão */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura da janela */
+        }
+       
+        table {
+            width: 100%; 
+            height: 100%;
+            border-collapse: collapse; /* Remove espaçamento entre células */
+        }
+        /* Estilos para as células da tabela */
+        td {
+            border: 6px solid #f9f948; /* Borda das células */
+            padding: 20px; /* Espaçamento interno das células */
+            text-align: center; /* Alinhamento do texto */
+            font-size: 1.5em; /* Tamanho da fonte */
+            box-sizing: border-box; /* Inclui borda e padding no cálculo da largura/altura */
+        }
+        /* Estilos das células. */
+        .cell1 {
+            background-color: #ff9999; /* Cor de fundo */
+            color: #f9f948;
+        }
+        .cell2 {
+            background-color: #99ccff; /* Cor de fundo */
+            color: #f9f948;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tabela com duas células -->
+    <table>
+        <tr>
+            <td class="cell1">Foi então que apareceu a raposa. </td>
+            <td class="cell2">Sou uma raposa - disse a raposa.</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+

@@ -1,0 +1,62 @@
+
+/* Estilos para o corpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para as seções parallax */
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1 {
+    background-image: url('https://i.pinimg.com/736x/d6/8f/80/d68f80047045d7eda69e62d0e1fa45b3.jpg'); /* URL da primeira imagem */
+}
+
+.parallax2 {
+    background-image: url('https://i.pinimg.com/736x/4b/f0/4a/4bf04ae36cb6312376826b5335560fd0.jpg'); /* URL da segunda imagem */
+}
+
+/* Estilos para a mensagem centralizada */
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(243, 209, 98);
+    font-size: 2em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para a seção de conteúdo regular */
+.content {
+    height: 100vh;
+    background-color: rgb(5, 5, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para a seção preta com mensagem */
+.black-section {
+    height: 100vh;
+    background-color: black;
+    color: rgb(243, 209, 98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}

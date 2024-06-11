@@ -1,0 +1,20 @@
+
+/* Estilos para o corpo da página */
+body {
+    display: flex; /* Usa flexbox para alinhar os elementos filhos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    height: 100vh; /* Define a altura como a altura total da viewport */
+    margin: 0; /* Remove as margens padrão */
+    background-color: #f1f0ac; /* Cor de fundo da página */
+}
+
+/* Estilos para a div do balão */
+#balloon {
+    width: 200px; /* Largura inicial do balão */
+    height: 200px; /* Altura inicial do balão */
+    background-color: rgb(240, 105, 206); /* Cor inicial do balão */
+    border-radius: 50%; /* Torna a div redonda */
+    cursor: pointer; /* Altera o cursor para pointer ao passar sobre o balão */
+    transition: width 0.3s, height 0.3s, background-color 0.3s; /* Adiciona transições suaves para largura, altura e cor */
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Define o conjunto de caracteres UTF-8 -->
+   <meta charset="UTF-8">
+   <!-- Largura da página como a largura do dispositivo e a escala -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <title>Basics</title>
+   <!-- Estilos CSS -->
+   <style>
+       
+       body {
+           background-color: pink; 
+           margin: 0; /* Remove margens padrão */
+           font-family: Arial, sans-serif; 
+       }
+       /* Estilos para o cabeçalho (h1) */
+       h1 {
+           color: white; /* Cor do texto */
+           text-align: center; 
+           font-size: 3em; /* Tamanho da fonte */
+           margin-top: 20px; /* Margem superior */
+       }
+       /* Estilos para a seção */
+       .images {
+           display: flex; /* Usa flexbox para alinhar os elementos filhos (as lojas) */
+           justify-content: center; /* Alinhamento centralizado horizontal */
+           margin-top: 60px; /* Margem superior */
+       }
+       /* Estilos para as imagens */
+       .images img {
+           margin: 0 10px; /* Margem entre as imagens */
+           width: 300px; /* Largura da imagem */
+           height: 300px; /* Altura fixa */
+           object-fit: cover; /* Corta a imagem para preencher a área definida */
+       }
+       /* Estilos para os links */
+       .links {
+           text-align: center;
+           margin-top: 10px; /* Margem superior */
+       }
+       .links a {
+           display: block; /* Exibe os links como blocos */
+           color: hsla(345, 94%, 54%, 0.897); /* Cor do texto */
+           text-decoration: none; /* Remove sublinhado dos links */
+           margin: 10px 0; /* Margem */
+       }
+       /* Estilos para a linha horizontal */
+       hr {
+           margin: 60px 0;
+           border: 1px solid hsla(345, 94%, 54%, 0.897); /* Cor e estilo da borda */
+       }
+       /* Estilos para o rodapé */
+       .footer {
+           text-align: right; /* Alinhamento */
+           margin-right: 20px; 
+           font-style: italic; 
+           font-family: monospace; /* Fonte monoespaçada */
+       }
+   </style>
+</head>
+<body>
+   <!-- Cabeçalho da página -->
+   <h1>Cat eShopping &hearts;</h1>
+  
+   <!-- Divisão para as imagens -->
+   <div class="images">
+       <!-- Primeira imagem com link -->
+       <div>
+           <img src="https://i.pinimg.com/564x/f8/73/36/f873361406f15b297748bae14d017e7b.jpg" alt="Online Shopping 1">
+           <div class="links">
+               <a href="https://www.amazon.com">AmazonCat</a> 
+           </div>
+       </div>
+       <!-- Segunda imagem com link -->
+       <div>
+           <img src="https://i.pinimg.com/564x/95/b7/70/95b7709ac9e13ddcca8efbe4d8f89cf2.jpg" alt="Online Shopping 2">
+           <div class="links">
+               <a href="https://www.ebay.com">eBayCat</a> 
+           </div>
+       </div>
+   </div>
+  
+   <!-- Linha horizontal -->
+   <hr>
+  
+   <!-- Rodapé -->
+   <div class="footer">
+       &copy; Rosana Rode-Sou 2024 <!-- Créditos -->
+   </div>
+</body>
+</html>
