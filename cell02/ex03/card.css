@@ -4,26 +4,25 @@ body {
     align-items: center; /* Centraliza os elementos verticalmente */
     height: 100vh; /* Define a altura como a altura total da viewport */
     margin: 0; /* Remove as margens padrão */
-    background-color: #fac7f3; /* Cor de fundo da página */
+    background-color: #fac7f3; 
     font-family: Arial, sans-serif; /* Define a fonte padrão da página */
 }
 
-/* Estilos para o contêiner do cartão de perfil */
 .profile-card {
-    background-color: #98eeee; /* Cor de fundo do cartão */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor do cartão */
-    padding: 20px; /* Espaçamento interno do cartão */
+    background-color: #98eeee;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(103, 1, 88, 0.1); /* Sombra ao redor do cartão */
+    padding: 40px; /* Espaçamento interno do cartão */
     width: 300px; /* Largura fixa do cartão */
     text-align: center; /* Alinhamento centralizado do texto */
     display: flex; /* Usa flexbox para alinhar os elementos filhos */
     flex-direction: column; /* Coloca os elementos em coluna */
-    align-items: center; /* Centraliza os elementos verticalmente */
+    align-items: center;  
 }
 
 /* Estilos para a tabela invisível */
 table {
-    width: 100%; /* Largura total da tabela */
+    width: 80%;
     border-collapse: collapse; 
 }
 
@@ -35,29 +34,26 @@ table {
     align-items: center;
 }
 
-/* Estilos para o login do usuário */
 .login {
-    font-size: 1.2em; /* Tamanho da fonte do login */
-    font-weight: bold; /* Negrito */
+    font-size: 1.2em;
+    font-weight: bold;
     margin: 20px 0; /* Margem acima e abaixo */
 }
 
-/* Estilos para a descrição do usuário */
 .description {
     color: #020000; /* Cor do texto da descrição */
     font-size: 1em; /* Tamanho da fonte da descrição */
-    margin: 10px 0; /* Margem acima e abaixo */
+    margin: 5px 0; /* Margem acima e abaixo */
 }
 
-/* Estilos para as imagens das redes sociais */
 .social-media {
-    margin: 20px 0; /* Margem acima e abaixo */
+    margin: 30px 0;
 }
 
 .social-icon {
-    width: 30px; /* Largura das imagens das redes sociais */
-    height: 30px; /* Altura das imagens das redes sociais */
-    margin: 0 5px; /* Espaçamento entre as imagens */
+    width: 40px;
+    height: 40px; 
+    margin: 0 5px;
 }
 
 /* Estilos para o botão de contato */
@@ -66,13 +62,12 @@ table {
     color: rgb(230, 7, 181); /* Cor do texto do botão */
     border: none; /* Remove a borda padrão do botão */
     padding: 10px 20px; /* Espaçamento interno do botão */
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 20px; 
     cursor: pointer; /* Altera o cursor para pointer ao passar sobre o botão */
     font-size: 1em; /* Tamanho da fonte do botão */
     transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo do botão */
 }
 
-/* Estilos para o botão ao passar o mouse */
 .contact-btn:hover {
     background-color: #0056b3; /* Altera a cor de fundo do botão ao passar o mouse */
 }

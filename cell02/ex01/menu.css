@@ -1,71 +1,80 @@
-
+/* Estilos gerais para o corpo da página */
 body {
     font-family: Arial, sans-serif; 
     background-color: #f5a8de; 
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura da janela */
+    height: 100vh;
 }
 
 /* Estilos para a barra de navegação */
 .navbar {
-    background-color: #333; /* Cor de fundo */
-    padding: 10px; /* Espaçamento */
-    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #66c0f8; 
+    padding: 10px;
+    border-radius: 10px;
 }
 
+/* Estilos para o menu da barra de navegação */
 .menu {
-    list-style: none; /* Remove marcadores de lista */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margens */
-    display: flex; /* Exibe itens em linha */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-/* Estilos para itens do menu */
+/* Estilos para cada item do menu */
 .menu-item {
-    position: relative; /* Necessário para o submenu */
+    position: relative;
 }
 
+/* Estilos para os links do menu */
 .menu-item a {
-    color: #fff; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    padding: 10px 20px; /* Espaçamento interno */
-    display: block; /* Exibe como bloco */
+    color: #e1e4a5;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
+/* Estilos para os links do menu ao passar o mouse */
 .menu-item a:hover {
-    background-color: #bb2aa8; /* Cor de fundo ao passar o mouse */
+    background-color: #bb2aa8;
+}
+
+/* Estilos para os links do menu que têm um submenu */
+.menu-item-has-submenu > a::after {
+    content: " ▼";
 }
 
 /* Estilos para o submenu */
 .submenu {
-    display: none; /* Esconde o submenu por padrão */
-    position: absolute; /* Posiciona o submenu */
-    top: 100%; /* Alinha ao final do item do menu */
-    left: 0; /* Alinha à esquerda */
-    background-color: #a47efd; /* Cor de fundo */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margens */
-    list-style: none; /* Remove marcadores de lista */
-    border-radius: 5px; /* Bordas arredondadas */
-    z-index: 1000; /* Garante que o submenu fique sobre outros elementos */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ccbaf5;
+    padding: 0;
+    margin: 0; 
+    list-style: none;
+    border-radius: 10px;
+    z-index: 1000;
 }
 
+/* Estilos para os links do submenu */
 .submenu li a {
-    padding: 10px; /* Espaçamento interno */
-    color: #0c0c0c; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    display: block; /* Exibe como bloco */
+    padding: 10px;
+    color: #0891b4;
+    text-decoration: none;
+    display: block;
 }
 
+/* Estilos para os links do submenu ao passar o mouse */
 .submenu li a:hover {
-    background-color: #aaf7bd; /* Cor de fundo ao passar o mouse */
+    background-color: #aaf7bd;
 }
 
 /* Mostra o submenu ao passar o mouse sobre o item do menu */
 .menu-item:hover .submenu {
-    display: block; /* Exibe o submenu */
+    display: block;
 }
-
