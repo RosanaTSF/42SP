@@ -1,41 +1,56 @@
-/* Estilos para o corpo da página */
+/* Estiliza o corpo da página */
 body {
-    display: flex; /* Usa flexbox para alinhar os elementos filhos */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    height: 100vh; /* Define a altura como a altura total da viewport */
-    margin: 0; /* Remove as margens padrão */
-    background-color: #e8aff3; /* Cor de fundo da página */
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    display: flex; 
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura para 100% da altura da janela de visualização */
+    margin: 20; /* Define a margem em todas as direções para 20px */
+    background-color: #7fd3f8; /* Define a cor de fundo */
+    font-family: Arial, sans-serif; /* Define a família de fontes */
 }
 
-/* Estilos para o formulário da calculadora */
+/* Estiliza o contêiner da calculadora */
+.calculator-container {
+    text-align: center; /* Centraliza o texto */
+    color:#dd17ac; /* Define a cor do texto */
+    text-shadow: 2px 2px 2px #3789f4; /* Adiciona uma sombra ao texto */
+}
+
 form {
-    display: flex; /* Usa flexbox para alinhar os elementos filhos */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    background-color: #28f5b7; /* Cor de fundo do formulário */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulário */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os itens do flexbox em uma coluna */
+    align-items: center; /* Centraliza os itens do flexbox horizontalmente */
+    background-color: #eebceb; 
+    padding: 20px; /* Adiciona preenchimento em todas as direções */
+    border-radius: 20px; /* Arredonda os cantos da borda */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao formulário */
+    border: 6px solid  #f967b5; /* Adiciona uma borda ao formulário */
 }
 
-/* Estilos para os campos de entrada */
+/* Estiliza os grupos de entrada */
+.input-group {
+    margin: 20px 0; /* Adiciona margem acima e abaixo */
+}
+
+/* Estiliza os campos de entrada e os menus suspensos */
 input, select {
-    margin: 10px 0; /* Margem acima e abaixo */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #020000; /* Borda cinza clara */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 1em; /* Tamanho da fonte */
+    padding: 10px; /* Adiciona preenchimento */
+    border: 1px solid #f967b5; /* Adiciona uma borda */
+    border-radius: 20px; /* Arredonda os cantos da borda */
+    font-size: 1em; /* Define o tamanho da fonte */
 }
 
-/* Estilos para o botão de submit */
+/* Estiliza o botão de envio */
 input[type="submit"] {
-    background-color: #1ee9df; /* Cor de fundo */
-    color: rgb(245, 7, 233); /* Cor do texto */
-    cursor: pointer; /* Altera o cursor para pointer ao passar sobre o botão */
+    background-color: #7cceeb; 
+    color: #f967b5; /* Define a cor do texto */
+    cursor: pointer; /* Muda o cursor para um ponteiro quando passa o mouse */
+    border-radius: 20px; /* Arredonda os cantos da borda */
+    padding: 10px 20px; /* Adiciona preenchimento */
+    margin-top: 20px; /* Adiciona margem acima */
 }
 
+/* Estiliza o botão de envio quando o mouse passa sobre ele */
 input[type="submit"]:hover {
-    background-color: #3744f3; /* Cor de fundo ao passar o mouse */
+    background-color: #17a1d7; /* Muda a cor de fundo */
 }

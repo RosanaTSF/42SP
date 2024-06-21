@@ -1,77 +1,55 @@
-$(document).ready(function() {
-    // Carrega tarefas salvas ao carregar a página
-    loadTasks();
+document.addEventListener('DOMContentLoaded', function() {
+    const addButton = document.getElementById('addTaskButton'); // Botão para adicionar tarefas
+    const taskInput = document.getElementById('taskInput'); // Campo de entrada para novas tarefas
+    const taskList = document.getElementById('taskList'); // Lista onde as tarefas são exibidas
 
-    // Adiciona evento ao botão de adicionar tarefa
-    $('#addTaskBtn').click(function() {
-        addTask();
-    });
-
-    // Função para carregar tarefas do cookie
-    function loadTasks() {
-        const tasks = getCookie('tasks');
-        if (tasks) {
-            const taskList = JSON.parse(tasks);
-            taskList.forEach(task => {
-                addTaskToDOM(task);
-            });
-        }
-    }
-
-    // Função para salvar tarefas no cookie
-    function saveTasks() {
-        const tasks = [];
-        $('.task').each(function() {
-            tasks.push($(this).text());
-        });
-        setCookie('tasks', JSON.stringify(tasks), 7);
-    }
-
-    // Função para adicionar tarefa ao DOM
-    function addTaskToDOM(task) {
-        const taskDiv = $('<div class="task"></div>').text(task);
-        taskDiv.click(function() {
-            removeTask($(this));
-        });
-        $('#ft_list').prepend(taskDiv);
-        saveTasks();
-    }
-
-    // Função para adicionar nova tarefa
+    // Função para adicionar tarefa
     function addTask() {
-        const task = prompt("Nova tarefa:");
-        if (task) {
-            addTaskToDOM(task);
+        const taskText = taskInput.value.trim();
+        if (taskText) {
+            // Cria o elemento da tarefa
+            const taskItem = document.createElement('div');
+            taskItem.className = 'task';
+
+            // Adiciona o texto da tarefa
+            const taskContent = document.createElement('span');
+            taskContent.textContent = taskText;
+            taskItem.appendChild(taskContent);
+
+            // Botão de remover
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = function() {
+                taskItem.remove();
+            };
+            taskItem.appendChild(removeButton);
+
+            // Botão de editar
+            const editButton = document.createElement('button');
+            editButton.textContent = 'Edit';
+            editButton.onclick = function() {
+                const newText = prompt('Edit the task:', taskContent.textContent);
+                if (newText) {
+                    taskContent.textContent = newText;
+                }
+            };
+            taskItem.appendChild(editButton);
+
+            // Adiciona a tarefa à lista
+            taskList.appendChild(taskItem);
+
+            // Limpa o campo de entrada
+            taskInput.value = '';
         }
     }
 
-    // Função para remover tarefa
-    function removeTask(taskDiv) {
-        if (confirm("Deseja remover esta tarefa?")) {
-            taskDiv.remove();
-            saveTasks();
-        }
-    }
+    // Evento para adicionar tarefa
+    addButton.addEventListener('click', addTask);
 
-    // Funções para manipulação de cookies
-    function setCookie(name, value, days) {
-        let expires = "";
-        if (days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
+    // Opcional: Adicionar tarefa com Enter
+    taskInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            addTask();
         }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for(let i=0;i < ca.length;i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-        }
-        return null;
-    }
+    });
 });

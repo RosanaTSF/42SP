@@ -8,13 +8,15 @@ function calculate(leftOperand, operator, rightOperand) {
         case '*':
             return leftOperand * rightOperand;
         case '/':
-            if (rightOperand === 0) return "It’s over 9000!";
+            // Verifica se o divisor é zero
+            if (rightOperand === 0) return "Não é possível dividir por zero!";
             return leftOperand / rightOperand;
         case '%':
-            if (rightOperand === 0) return "It’s over 9000!";
+            // Verifica se o divisor é zero
+            if (rightOperand === 0) return "Não é possível dividir por zero!";
             return leftOperand % rightOperand;
         default:
-            return "Error :(";
+            return "Operador inválido!";
     }
 }
 
@@ -28,9 +30,8 @@ document.getElementById('calculator').addEventListener('submit', function(event)
     const rightOperand = parseInt(document.getElementById('rightOperand').value);
 
     // Verifica se os valores são válidos
-    if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
-        alert("Error :("); // Mostra um alerta de erro
-        console.log("Error :("); // Exibe a mensagem de erro no console
+    if (isNaN(leftOperand) || isNaN(rightOperand)) {
+        alert("Por favor, insira números válidos!"); // Mostra um alerta de erro
         return;
     }
 
@@ -38,16 +39,9 @@ document.getElementById('calculator').addEventListener('submit', function(event)
     const result = calculate(leftOperand, operator, rightOperand);
 
     // Verifica se ocorreu divisão ou módulo por zero
-    if (result === "It’s over 9000!") {
-        alert(result); // Mostra um alerta com a mensagem "It’s over 9000!"
-        console.log(result); // Exibe a mensagem "It’s over 9000!" no console
+    if (result === "Não é possível dividir por zero!") {
+        alert(result); // Mostra um alerta com a mensagem de erro
     } else {
         alert("Resultado: " + result); // Mostra um alerta com o resultado do cálculo
-        console.log("Resultado: " + result); // Exibe o resultado do cálculo no console
     }
 });
-
-// Função para mostrar o alerta "Please, use me..." a cada 30 segundos
-setInterval(function() {
-    alert("Please, use me...");
-}, 30000); // 30 segundos = 30000 milissegundos

@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <!-- Define o conjunto de caracteres como UTF-8 -->
     <meta charset="UTF-8">
-    <!-- Define a largura da página como a largura do dispositivo e a escala inicial como 1.0 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Define o título da página -->
-    <title>Calculadora Básica</title>
-    <!-- Link para o arquivo CSS externo -->
+    <title>Magic Calculator</title>
     <link rel="stylesheet" href="calc.css">
 </head>
 <body>
-    <!-- Formulário da calculadora -->
-    <form id="calculator">
-        <!-- Campo de entrada para o membro esquerdo -->
-        <input type="number" id="leftOperand" placeholder="Número esquerdo" min="0" required>
-        
-        <!-- Campo de seleção para os operadores -->
-        <select id="operator">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            <option value="%">%</option>
-        </select>
-        
-        <!-- Campo de entrada para o membro direito -->
-        <input type="number" id="rightOperand" placeholder="Número direito" min="0" required>
-        
-        <!-- Botão de submit para executar o cálculo -->
-        <input type="submit" value="Try me!">
-    </form>
+    <main class="calculator-container">
+        <h1 class="title">Calculadora Mágica</h1>
+        <form id="calculator">
+            <div class="input-group">
+                <input type="number" id="leftOperand" placeholder="Insira o número esquerdo" min="0" required>
+            </div>
+            
+            <div class="input-group">
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <input type="number" id="rightOperand" placeholder="Insira o número direito" min="0" required>
+            </div>
+            
+            <input type="submit" value="Calcular">
+        </form>
+    </main>
 
-    <!-- Script JavaScript externo -->
     <script src="calc.js"></script>
 </body>
 </html>
-

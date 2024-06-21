@@ -1,41 +1,36 @@
-$(document).ready(function() {
-    // Define o tamanho inicial do balão
-    let balloonSize = 200;
+// Obtém a referência do elemento balão do DOM. 
+// O método document.getElementById retorna um objeto que representa o elemento DOM com o ID especificado.
+const balloon = document.getElementById('balloon');
 
-    // Array de cores para mudança
-    const colors = ['red', 'green', 'blue'];
+let balloonSize = 200;
 
-    // Índice inicial para as cores
-    let colorIndex = 0;
+const colors = ['yellow', 'white', 'blue'];
 
-    // Função para aumentar o tamanho do balão ao clicar
-    $('#balloon').on('click', function() {
-        balloonSize += 10; // Aumenta o tamanho em 10px
-        $(this).css({
-            width: balloonSize + 'px', // Atualiza a largura do balão
-            height: balloonSize + 'px', // Atualiza a altura do balão
-            backgroundColor: colors[colorIndex] // Atualiza a cor do balão
-        });
-        colorIndex = (colorIndex + 1) % colors.length; // Atualiza o índice da cor
+let colorIndex = 0;
 
-        // Verifica se o tamanho do balão é maior que 420px
-        if (balloonSize > 420) {
-            balloonSize = 200; // Redefine o tamanho para 200px
-            $(this).css({
-                width: balloonSize + 'px', // Atualiza a largura do balão
-                height: balloonSize + 'px' // Atualiza a altura do balão
-            });
-        }
-    });
+// Adiciona um ouvinte de evento de clique ao balão. 
+// A função passada como argumento será chamada sempre que o balão for clicado.
+balloon.addEventListener('click', () => {
+    balloonSize += 10; // Aumenta o tamanho do balão em 10px.
+    balloon.style.width = balloonSize + 'px'; // Atualiza a largura do balão.
+    balloon.style.height = balloonSize + 'px'; // Atualiza a altura do balão.
+    colorIndex = (colorIndex + 1) % colors.length; // Atualiza o índice da cor. O operador % é o operador de módulo, que retorna o resto da divisão.
+    balloon.style.backgroundColor = colors[colorIndex]; // Atualiza a cor do balão.
 
-    // Função para diminuir o tamanho do balão ao sair do mouse
-    $('#balloon').on('mouseout', function() {
-        balloonSize = Math.max(200, balloonSize - 5); // Diminui o tamanho em 5px, mas não menos que 200px
-        $(this).css({
-            width: balloonSize + 'px', // Atualiza a largura do balão
-            height: balloonSize + 'px', // Atualiza a altura do balão
-            backgroundColor: colors[(colorIndex - 1 + colors.length) % colors.length] // Atualiza a cor do balão na ordem inversa
-        });
-        colorIndex = (colorIndex - 1 + colors.length) % colors.length; // Atualiza o índice da cor na ordem inversa
-    });
+    // Se o tamanho do balão for maior que 420px
+    if (balloonSize > 420) {
+        alert("O balão estourou!");
+        balloonSize = 200; // Redefine o tamanho para 200px (largura e altura).
+        balloon.style.width = balloonSize + 'px'; 
+        balloon.style.height = balloonSize + 'px'; 
+    }
+});
+
+// Adiciona um ouvinte de evento de saída do mouse ao balão. A função passada como argumento será chamada sempre que o mouse sair do balão.
+balloon.addEventListener('mouseout', () => {
+    balloonSize = Math.max(200, balloonSize - 5); // Diminui o tamanho em 5px, mas não menos que 200px. A função Math.max retorna o maior dos argumentos.
+    balloon.style.width = balloonSize + 'px'; // Atualiza a largura do balão.
+    balloon.style.height = balloonSize + 'px'; // Atualiza a altura do balão.
+    colorIndex = (colorIndex - 1 + colors.length) % colors.length; // Atualiza o índice da cor em ordem inversa.
+    balloon.style.backgroundColor = colors[colorIndex]; // Atualiza a cor do balão.
 });

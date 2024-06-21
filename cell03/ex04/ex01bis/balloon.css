@@ -7,13 +7,35 @@ body {
     margin: 0; /* Remove as margens padrão */
     background-color: #f1f0ac; /* Cor de fundo da página */
 }
+.container {
+    display: flex; 
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    height: 100vh;
+    margin: 0; /* Remove as margens padrão */
+    background-color: #f1f0ac;
+    user-select: none; /* Impede a seleção do texto */
+}
 
 /* Estilos para a div do balão */
 #balloon {
-    width: 200px; /* Largura inicial do balão */
-    height: 200px; /* Altura inicial do balão */
+    width: 200px; 
+    height: 200px;
     background-color: rgb(240, 105, 206); /* Cor inicial do balão */
-    border-radius: 50%; /* Torna a div redonda */
+    border-radius: 50%;
     cursor: pointer; /* Altera o cursor para pointer ao passar sobre o balão */
     transition: width 0.3s, height 0.3s, background-color 0.3s; /* Adiciona transições suaves para largura, altura e cor */
+    
+    /* Centraliza o conteúdo dentro do balão usando flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para a mensagem dentro do balão */
+#message {
+    font-size: 20px; /* Tamanho da fonte da mensagem */
+    color: #fff; /* Cor do texto da mensagem */
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
