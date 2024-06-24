@@ -2,28 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Garante que o site será exibido corretamente em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo 1</title>
-    <!-- Bootstrap CSS -->
+    <!-- Importa o CSS do Bootstrap para estilização e responsividade -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
+    <!-- Link para o arquivo de estilos personalizados -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar fixa no topo -->
+    <!-- Navbar fixa no topo da página -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Meu Currículo</a>
+        <!-- Botão para voltar para a página inicial -->
+        <a class="btn btn-pink" href="index.html" role="button">Voltar</a>
+        <a class="navbar-brand ml-3" href="#">Meu Currículo</a>
+        <!-- Botão para colapsar a navbar em telas menores -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Itens da navbar -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
+                <!-- Link para a seção Sobre -->
                 <li class="nav-item">
                     <a class="nav-link" href="#about">Sobre</a>
                 </li>
+                <!-- Link para a seção Experiência -->
                 <li class="nav-item">
                     <a class="nav-link" href="#experience">Experiência</a>
                 </li>
+                <!-- Link para a seção Contato -->
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contato</a>
                 </li>
@@ -31,49 +39,69 @@
         </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
+    <!-- Container principal que engloba todo o conteúdo da página -->
     <div class="container mt-5 pt-5">
-        <!-- Primeira parte: Sobre -->
+        <!-- Seção Sobre -->
         <section id="about" class="my-5">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="assets/me.jpeg"
-                    " class="img-fluid rounded-circle" alt="Foto de Perfil">
-                </div>
-                <div class="col-md-8">
-                    <h2>Rosana TSF</h2>
-                    <p class="lead">Student</p>
-                    <p>Hello, I'm studying Computer Engineering, and it's my second degree. 
-                        In my first one, I graduated in Law and worked as a lawyer. 
-                        I really enjoy the legal field, but I fell in love with technology. 
-                        Besides college, I take extra courses and study English.
-                        </p>
+            <div class="card" style="background-color: #ffccd5;">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Coluna para a foto de perfil -->
+                        <div class="col-md-4 text-center">
+                            <img src="assets/me.jpeg" class="img-fluid rounded-circle" alt="Foto de Perfil">
+                        </div>
+                        <!-- Coluna para o texto sobre a pessoa -->
+                        <div class="col-md-8">
+                            <h2>Rosana TSF</h2>
+                            <p class="lead">Student</p>
+                            <p>Hello, I'm studying Computer Engineering, and it's my second degree. 
+                                In my first one, I graduated in Law and worked as a lawyer. 
+                                I really enjoy the legal field, but I fell in love with technology. 
+                                Besides college, I take extra courses and study English.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Segunda parte: Experiência -->
+        <!-- Seção Experiência -->
         <section id="experience" class="my-5">
-            <h2>Experiências</h2>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <h5>Imersão 42 SP</h5>
-                    <p>Projeto Piscina</p>
-                    <p></p>
-                </li>
-            </ul>
+            <div class="card" style="background-color: #9cd4e9;">
+                <div class="card-body">
+                    <h2>Experiências</h2>
+                    <div class="timeline">
+                        <!-- Item de experiência -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h5> Missão 42 SP</h5>
+                                <p>. Linguagem C</p>
+                                <p>. HTML</p> 
+                                <p>. JavaScript</p> 
+                                <p>. JQuery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Terceira parte: Contato -->
+        <!-- Seção Contato -->
         <section id="contact" class="my-5">
-            <h2>Contato</h2>
-            <p>Email: <a href="mailto:email@dominio.com">rosanatsf@gmail.com</a></p>
-            <p>Telefone: (11) 993382949</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/rosanatsf/">linkedin.com/in/seuperfil</a></p>
+            <div class="card" style="background-color: #9cf0bd;">
+                <div class="card-body">
+                    <h2>Contato</h2>
+                    <!-- Informações de contato -->
+                    <p>Email: <a href="mailto:rosanatsf@gmail.com">rosanatsf@gmail.com</a></p>
+                    <p>Telefone: (11) 993382949</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/rosanatsf/">linkedin.com/in/rosanatsf</a></p>
+                </div>
+            </div>
         </section>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Scripts do Bootstrap e suas dependências para funcionalidades interativas -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

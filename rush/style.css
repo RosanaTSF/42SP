@@ -1,22 +1,115 @@
-/* Ajustes para a barra de navegação fixa */
+:root {
+    --border-radius-circle: 50%; /* Bordas circulares para elementos */
+    --color-primary: #cfffb9; /* Cor primária para elementos como a linha do tempo */
+    --color-accent: #61bbec; /* Cor de destaque para marcadores na linha do tempo */
+    --color-title: #ff6392; /* Cor para títulos dentro dos itens da linha do tempo */
+    --profile-pic-size: 150px; /* Tamanho padrão para a foto do perfil */
+    --timeline-marker-width: 10px; /* Largura padrão dos marcadores na linha do tempo */
+    --timeline-marker-width-sm: 8px; /* Largura dos marcadores na linha do tempo em telas menores */
+    --color-navbar: var(--color-accent); /* Define a cor da navbar usando a cor de destaque */
+}
+
 body {
-    padding-top: 56px; /* Espaço para a barra de navegação fixa */
+    padding-top: 56px; /* Espaço no topo para a navbar */
+    position: relative; /* Permite posicionamento absoluto de elementos filhos */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f6f7ed; /* Cor de fundo suave */
+    color: #f11c8e; /* Cor do texto */
 }
 
-/* Estilo personalizado para a timeline */
-.timeline {
-    list-style: none;
-    padding: 0;
+.profile-pic, .img-fluid.rounded-circle {
+    width: var(--profile-pic-size); 
+    height: var(--profile-pic-size); /* Altura baseada na variável */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border-radius: var(--border-radius-circle);
+    border: 3px solid #ffd3e2;
 }
 
+.profile-pic {
+    position: absolute; /* Posicionamento absoluto na página */
+    top: 0; /* Alinhado ao topo da página */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino para centralização exata */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+/* Estilo para a navbar */
+.navbar {
+    z-index: 999; /* Menor que o z-index da foto do perfil */
+    background-color: var(--color-navbar); /* Aplica a cor da navbar usando a variável */
+}
+/* Estilo personalizado para o botão "Voltar" */
+.btn-pink {
+    background-color: #f788bf; /* Cor de fundo rosa */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Padding interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+.btn-pink:hover {
+    background-color: #ff85c1; /* Cor de fundo rosa claro no hover */
+}
+
+
+/* Estilos para itens da linha do tempo */
 .timeline-item {
-    margin: 20px 0;
+    padding-top: 90px; /* Espaço no topo para evitar sobreposição com a foto do perfil */
+    margin: 20px 0; /* Espaçamento vertical entre itens */
+    padding-bottom: 20px; /* Espaçamento no fundo de cada item */
+    border-left: 2px solid var(--color-primary); /* Linha do tempo à esquerda */
+    position: relative; /* Permite posicionamento absoluto de pseudo-elementos */
+    transition: transform 0.3s ease; /* Transição suave para efeito de hover */
+}
+
+/* Efeito de hover para itens da linha do tempo */
+.timeline-item:hover {
+    transform: scale(1.03); /* Aumento ao passar o mouse */
+}
+
+/* Marcadores na linha do tempo */
+.timeline-item::before {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Posicionamento absoluto */
+    left: -6px; /* Posicionado à esquerda da linha do tempo */
+    top: 0; /* Alinhado ao topo do item */
+    height: 100%;
+    width: var(--timeline-marker-width); /* Largura baseada na variável */
+    background-color: var(--color-accent); /* Cor de fundo do marcador */
+    border-radius: 20px;
+}
+
+/* Estilos para títulos e textos dentro dos itens da linha do tempo */
+.timeline-item h5, .timeline-item p {
+    margin: 0;
+    padding-right: 15px; /* Espaçamento à direita */
 }
 
 .timeline-item h5 {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Espaçamento abaixo do título */
+    color: var(--color-title); /* Cor do título */
+    font-weight: bold; /* Título em negrito */
 }
 
-.timeline-item p {
-    margin: 0;
+/* Estilos para imagens dentro dos itens da linha do tempo */
+.timeline-item img {
+    border-radius: var(--border-radius-circle); /* Bordas circulares */
+    width: 100px; /* Largura fixa */
+    height: 100px; /* Altura fixa */
+    object-fit: cover; /* Ajuste da imagem */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .timeline-item {
+        margin: 15px 0; /* Espaçamento vertical reduzido */
+    }
+
+    .timeline-item::before {
+        left: -4px; /* Ajuste na posição do marcador */
+        width: var(--timeline-marker-width-sm); /* Largura reduzida do marcador */
+    }
 }
