@@ -1,6 +1,8 @@
-# Missão42 - Componentes e Conteúdo
+# Missão42 - Componentes e Conteúdo:
 
-## Componentes do Projeto
+A escola 42 é presencial, sem professores. Com isso, ela simula um ambiente de trabalho. Para avançar, precisamos abrir lotes (agendar horários para avaliar e ser avaliado em cada projeto cumprido). Cada avaliação feita soma um ponto, e cada avaliação recebida, perde um ponto. Os pontos são importantes para ser avaliado e seguir para os próximos desafios, logo, não podemos ficar zerados. Apenas no RUSH, projeto final, que é preciso  receber 2 avaliações, por ser feito em dupla.
+
+## Componentes do Projeto:
 
 Missão42 é composto por várias células, cada uma focada em diferentes aspectos do desenvolvimento web e programação shell.
 
@@ -28,7 +30,7 @@ A Missão 42 abrange linguagens e tecnologias essenciais para o desenvolvimento 
   - JavaScript e jQuery para adicionar interatividade às páginas web.
 
 
-## 🎬 **Vídeos (Gifs) dos Principais Projetos** 🎬
+## 🎬 **Vídeos (Gifs) dos Principais Projetos:** 🎬
 
 ### Parte 1
 <div style="display: flex; justify-content: space-around; align-items: center;">
@@ -54,6 +56,11 @@ A Missão 42 abrange linguagens e tecnologias essenciais para o desenvolvimento 
   <img src="GIFS/VMS.gif" width="45%" height="200px" style="object-fit: contain;"/>
 </div>
 
-## Licença
+### Projeto Final - O RUSH (PORTFOLIOS EM DUPLA):
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="./RUSH.gif" width="90%" height="300px" style="object-fit: contain;"/>
+</div> 
+
+## Licença:
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
